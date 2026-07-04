@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnp.*
+bun.lockb
+
+# Next.js build output
+.next/
+out/
+
+# Env files (NEVER commit secrets)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+dev.log
+server.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.db-journal
+db/*.db
+db/*.db-journal
+
+# Sandbox-specific folders — NOT part of the portfolio
+upload/
+download/
+skills/
+examples/
+mini-services/
+
+# Platform / temp
+.pm2/
+.zscripts/dev.log
+.zscripts/dev.pid
