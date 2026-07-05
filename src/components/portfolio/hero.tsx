@@ -8,53 +8,57 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] flex flex-col items-center justify-start sm:justify-center px-5 pt-28 pb-16 sm:pt-28 sm:pb-20 gap-0"
+      className="relative min-h-[100svh] flex flex-col items-center px-5 pt-24 sm:pt-28 pb-8 gap-0"
     >
-      {/* Eyebrow */}
-      <motion.p
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease, delay: 0.18 }}
-        className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] sm:tracking-[0.32em] text-muted-foreground/70 mt-4 mb-5 sm:mb-7 text-center"
-      >
-        Design — Development — Artificial Intelligence
-      </motion.p>
-
-      {/* Name */}
-      <div className="text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 28 }}
+      {/* Centered content block — my-auto keeps it vertically centered in the
+          space above the stat strip without ever overlapping it */}
+      <div className="my-auto flex flex-col items-center">
+        {/* Eyebrow */}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.26 }}
-          className="font-serif text-[clamp(2.8rem,13vw,9.5rem)] leading-[0.9] tracking-[-0.03em] text-gradient"
+          transition={{ duration: 0.8, ease, delay: 0.18 }}
+          className="text-[10px] sm:text-[11px] uppercase tracking-[0.28em] sm:tracking-[0.32em] text-muted-foreground/70 mt-4 mb-5 sm:mb-7 text-center"
         >
-          Taha
-          <br />
-          Jahangir
-        </motion.h1>
-      </div>
+          Design — Development — Artificial Intelligence
+        </motion.p>
 
-      {/* Sub copy */}
-      <motion.p
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease, delay: 0.42 }}
-        className="mt-6 sm:mt-9 max-w-xl text-center text-[13px] sm:text-[14.5px] leading-relaxed text-muted-foreground text-balance px-2"
-      >
-        A multidisciplinary designer & engineer building{" "}
-        <span className="text-foreground/90 font-serif italic">
-          premium digital products
-        </span>{" "}
-        at the intersection of design, code, and intelligent systems — for
-        founders who refuse to look ordinary.
-      </motion.p>
+        {/* Name */}
+        <div className="text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 28 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease, delay: 0.26 }}
+            className="font-serif text-[clamp(2.8rem,min(13vw,22svh),9.5rem)] leading-[0.9] tracking-[-0.03em] text-gradient"
+          >
+            Taha
+            <br />
+            Jahangir
+          </motion.h1>
+        </div>
+
+        {/* Sub copy */}
+        <motion.p
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease, delay: 0.42 }}
+          className="mt-6 sm:mt-9 max-w-xl text-center text-[13px] sm:text-[14.5px] leading-relaxed text-muted-foreground text-balance px-2"
+        >
+          A multidisciplinary designer & engineer building{" "}
+          <span className="text-foreground/90 font-serif italic">
+            premium digital products
+          </span>{" "}
+          at the intersection of design, code, and intelligent systems — for
+          founders who refuse to look ordinary.
+        </motion.p>
+      </div>
 
       {/* Stat strip */}
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease, delay: 0.7 }}
-        className="mt-auto sm:mt-14 pt-8 sm:pt-0 w-full max-w-md sm:absolute sm:bottom-8 sm:left-1/2 sm:-translate-x-1/2 sm:w-[min(92%,46rem)] sm:max-w-none glass rounded-2xl px-2 py-2 grid grid-cols-3 divide-x divide-white/5"
+        className="mt-8 sm:mt-10 w-full max-w-md sm:w-[min(92%,46rem)] sm:max-w-none glass rounded-2xl px-2 py-2 grid grid-cols-3 divide-x divide-white/5"
       >
         {[
           { k: "6+ yrs", v: "Crafting" },
